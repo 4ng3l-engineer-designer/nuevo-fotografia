@@ -1261,12 +1261,10 @@
 			transform: scale(1.1);
 		}
 
-		/* VIÑETA */
 		.chatbot-bubble {
 			position: absolute;
-			right: 75px;
-			/* aparece a la izquierda del botón */
-			top: 15px;
+			bottom: 75px;
+			right: 0;
 			background: white;
 			color: #222;
 			padding: 10px 14px;
@@ -1276,23 +1274,26 @@
 			white-space: nowrap;
 		}
 
-		/* TRIANGULO DE LA VIÑETA */
 		.chatbot-bubble::after {
 			content: "";
 			position: absolute;
-			right: -8px;
-			top: 50%;
-			transform: translateY(-50%);
+			bottom: -8px;
+			right: 20px;
+			transform: none;
 			border-width: 8px;
 			border-style: solid;
-			border-color: transparent transparent transparent white;
+			border-color: white transparent transparent transparent;
 		}
 
 		.chatbot-wrapper {
 			position: fixed !important;
 			right: 25px !important;
-			bottom: 150px !important;
+			bottom: 25px !important;
 			z-index: 9999 !important;
+		}
+
+		.elementor-element-e4e1afa {
+			display: none !important;
 		}
 	</style>
 
