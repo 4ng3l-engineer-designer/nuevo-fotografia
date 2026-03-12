@@ -613,7 +613,8 @@
 								<ul id="menu-1-c744f81" class="elementor-nav-menu">
 									<li
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-53">
-										<a href="index.html" class="elementor-item">Pantalla Principal</a></li>
+										<a href="index.html" class="elementor-item">Pantalla Principal</a>
+									</li>
 									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a
 											href="portfolio/index.html" class="elementor-item">Portafolio</a></li>
 									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54"><a
@@ -630,12 +631,14 @@
 </li> -->
 											<li
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1188">
-												<a href="faq.1.html" class="elementor-sub-item">FAQ</a></li>
+												<a href="faq.1.html" class="elementor-sub-item">FAQ</a>
+											</li>
 											<li
 												class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1177 current_page_item menu-item-1189">
 												<a href="latest-work.1.html" aria-current="page"
 													class="elementor-sub-item elementor-item-active">ÚLTIMOS
-													TRABAJOS</a></li>
+													TRABAJOS</a>
+											</li>
 											<li
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1190">
 												<a href="services/index.html" class="elementor-sub-item">SERVICIOS</a>
@@ -643,7 +646,8 @@
 											<li
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1186">
 												<a href="book-now/index.html" class="elementor-sub-item">RESERVAR
-													AHORA</a></li>
+													AHORA</a>
+											</li>
 										</ul>
 									</li>
 									<!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a
@@ -685,15 +689,18 @@
 												class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1177 current_page_item menu-item-1189">
 												<a href="latest-work.1.html" aria-current="page"
 													class="elementor-sub-item elementor-item-active"
-													tabindex="-1">ÚLTIMOS TRABAJOS</a></li>
+													tabindex="-1">ÚLTIMOS TRABAJOS</a>
+											</li>
 											<li
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1190">
 												<a href="services/index.html" class="elementor-sub-item"
-													tabindex="-1">SERVICIOS</a></li>
+													tabindex="-1">SERVICIOS</a>
+											</li>
 											<li
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1186">
 												<a href="book-now/index.html" class="elementor-sub-item"
-													tabindex="-1">RESERVAR AHORA</a></li>
+													tabindex="-1">RESERVAR AHORA</a>
+											</li>
 										</ul>
 									</li>
 									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a
@@ -1324,14 +1331,16 @@
 							data-id="ed80ae3" data-element_type="widget" data-widget_type="theme-site-logo.default">
 							<div class="elementor-widget-container">
 								<a href="https://themes.oliveconcepts.com/mr-snaps">
-									<img width="170" height="40" src="wp-content/uploads/sites/20/2023/07/logodevioz.png"
+									<img width="170" height="40"
+										src="wp-content/uploads/sites/20/2023/07/logodevioz.png"
 										class="attachment-full size-full wp-image-4" alt="" /> </a>
 							</div>
 						</div>
 						<div class="elementor-element elementor-element-f9464f7 elementor-widget elementor-widget-text-editor"
 							data-id="f9464f7" data-element_type="widget" data-widget_type="text-editor.default">
 							<div class="elementor-widget-container">
-								<p>La trayectoria como cinefotógrafo comenzó con una simple fascinación por la magia de congelar el tiempo.</p>
+								<p>La trayectoria como cinefotógrafo comenzó con una simple fascinación por la magia de
+									congelar el tiempo.</p>
 							</div>
 						</div>
 					</div>
@@ -1562,6 +1571,75 @@
 		id="elementor-pro-frontend-js"></script>
 	<script src="wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js@ver=3.30.0"
 		id="pro-elements-handlers-js"></script>
+
+	<style>
+		.chatbot-wrapper {
+			position: fixed;
+			right: 25px;
+			/* mismo eje que la flecha */
+			bottom: 150px;
+			/* arriba de la flecha */
+			z-index: 9999;
+		}
+
+		/* BOTON */
+		.chatbot-link img {
+			width: 65px;
+			height: 65px;
+			border-radius: 50%;
+			object-fit: cover;
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+			transition: transform 0.3s ease;
+		}
+
+		.chatbot-link img:hover {
+			transform: scale(1.1);
+		}
+
+		/* VIÑETA */
+		.chatbot-bubble {
+			position: absolute;
+			right: 75px;
+			/* aparece a la izquierda del botón */
+			top: 15px;
+			background: white;
+			color: #222;
+			padding: 10px 14px;
+			border-radius: 20px;
+			font-size: 14px;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+			white-space: nowrap;
+		}
+
+		/* TRIANGULO DE LA VIÑETA */
+		.chatbot-bubble::after {
+			content: "";
+			position: absolute;
+			right: -8px;
+			top: 50%;
+			transform: translateY(-50%);
+			border-width: 8px;
+			border-style: solid;
+			border-color: transparent transparent transparent white;
+		}
+
+		.chatbot-wrapper {
+			position: fixed !important;
+			right: 25px !important;
+			bottom: 150px !important;
+			z-index: 9999 !important;
+		}
+	</style>
+
+	<!-- Bot Devioz + Viñeta -->
+	<div class="chatbot-wrapper">
+		<div class="chatbot-bubble">
+			Conversa con <strong>SofIA 🤖</strong>
+		</div>
+		<a href="https://t.me/Devioz_SofIA_Bot" class="chatbot-link" target="_blank">
+			<img src="wp-content/uploads/sites/20/2023/08/sofia-bot.jpg" alt="Bot SofIA">
+		</a>
+	</div>
 
 </body>
 

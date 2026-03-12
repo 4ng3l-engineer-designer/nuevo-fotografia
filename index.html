@@ -1780,10 +1780,10 @@
 				</div>
 
 				<div class="flyer-display" style="position: relative;">
-					<a href="https://wa.me/51953704473" target="_blank">
-						<img src="wp-content/uploads/sites/20/2023/08/devioz20.png" alt="Flyer DEVIOZ Cinefotografía"
-							style="width: 100%; max-width: 1100px; border-radius: 15px; box-shadow: 0px 20px 50px rgba(0,0,0,0.9);">
-					</a>
+					<video src="wp-content/uploads/sites/20/2023/08/cinefoto.mp4" controls playsinline
+						style="width: 100%; max-width: 600px; border-radius: 15px; box-shadow: 0px 20px 50px rgba(0,0,0,0.9); display: block; margin: 0 auto;">
+						Tu navegador no soporta videos.
+					</video>
 				</div>
 			</div>
 		</div>
@@ -3507,7 +3507,7 @@
 		/* Efecto Traslúcido para la sección DEVIOZ */
 		.flyer-traslucido-bg {
 			position: relative !important;
-			background-image: url('wp-content/uploads/sites/20/2023/08/fotomain.png') !important;
+			background-image: url('') !important;
 			/* Tu flyer aquí */
 			background-size: cover !important;
 			background-position: center !important;
@@ -3546,7 +3546,77 @@
 		}
 	</style>
 
+	<style>
+		.chatbot-wrapper {
+			position: fixed;
+			right: 25px;
+			/* mismo eje que la flecha */
+			bottom: 150px;
+			/* arriba de la flecha */
+			z-index: 9999;
+		}
+	
+		/* BOTON */
+		.chatbot-link img {
+			width: 65px;
+			height: 65px;
+			border-radius: 50%;
+			object-fit: cover;
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+			transition: transform 0.3s ease;
+		}
+	
+		.chatbot-link img:hover {
+			transform: scale(1.1);
+		}
+	
+		/* VIÑETA */
+		.chatbot-bubble {
+			position: absolute;
+			right: 75px;
+			/* aparece a la izquierda del botón */
+			top: 15px;
+			background: white;
+			color: #222;
+			padding: 10px 14px;
+			border-radius: 20px;
+			font-size: 14px;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+			white-space: nowrap;
+		}
+	
+		/* TRIANGULO DE LA VIÑETA */
+		.chatbot-bubble::after {
+			content: "";
+			position: absolute;
+			right: -8px;
+			top: 50%;
+			transform: translateY(-50%);
+			border-width: 8px;
+			border-style: solid;
+			border-color: transparent transparent transparent white;
+		}
+		.chatbot-wrapper {
+    position: fixed !important;
+    right: 25px !important;
+    bottom: 150px !important;
+    z-index: 9999 !important;
+}
+	</style>
+
+<!-- Bot Devioz + Viñeta -->
+<div class="chatbot-wrapper">
+    <div class="chatbot-bubble">
+        Conversa con <strong>SofIA 🤖</strong>
+    </div>
+    <a href="https://t.me/Devioz_SofIA_Bot" class="chatbot-link" target="_blank">
+        <img src="wp-content/uploads/sites/20/2023/08/sofia-bot.jpg" alt="Bot SofIA">
+    </a>
+</div>
+
+
 </body>
+
 
 </html>
 
